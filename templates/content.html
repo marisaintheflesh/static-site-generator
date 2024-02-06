@@ -1,0 +1,27 @@
+{{ page.content }}
+<hr>
+<p>Created: {{ page.created }}</p>
+<p>Last modified: {{ page.lastmod }}</p>
+<hr>
+{% if type == "post" %}
+	{% for p in posts %}
+		{% if p == page.basename %}
+			{# remember, the posts are sorted newest to oldest, so it may get confusing here #}
+			{% if loop.previtem is defined %}
+				<p>Next post: <a href="/{{ posts[loop.previtem].basename }}/">{{ posts[loop.previtem].title }}</a></p>
+			{% endif %}
+			{% if loop.nextitem is defined %}
+				<p>Previous post: <a href="/{{ posts[loop.nextitem].basename }}/">{{ posts[loop.nextitem].title }}</a></p>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+{% elif type == "page" %}
+	{% if page.basename == "index" %}
+		<h1>Posts</h1>
+		<ul>
+		{% for p in posts %}
+        		<li><a href="/{{ posts[p].basename }}/">{{ posts[p].title }}</a></li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+{% endif %}

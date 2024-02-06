@@ -1,0 +1,21 @@
+{
+	"site":
+	{
+		"title": "Website Title",
+		"description": "It's a website description!",
+		"language": "en",
+		"textDirection": "ltr",
+		"baseURL": "https://itsawebsite.wowamazing/",
+		"author": "Some Internet Dev"
+	},
+
+	"pages":
+	{
+		"index": {"title": "Home", "created": 1111111111, "lastmod": 1111111111}
+	},
+
+	"posts":
+	{
+		"ot79855e": {"title": "Example Post Wow!", "created": 1111111111, "lastmod": 1111111111}
+	}
+}

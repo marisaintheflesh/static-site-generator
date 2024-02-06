@@ -1,0 +1,18 @@
+<ul>
+	<li>Pages</li>
+	<ul>
+{% for page in pages %}
+{% if pages[page].basename == "index" %}
+		<li><a href="/">{{ pages[page].title }}</a></li>
+{% else %}
+		<li><a href="/{{ pages[page].basename }}/">{{ pages[page].title }}</a></li>
+{% endif %}
+{% endfor %}
+	</ul>
+	<li>Posts</li>
+        <ul>
+{% for post in posts %}
+                <li><a href="/{{ posts[post].basename }}/">{{ posts[post].title }}</a></li>
+{% endfor %}
+        </ul>
+</ul>

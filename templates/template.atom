@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ site.title|escape }}</title>
+	<link rel="self" href="{{ site.baseURL }}feed.atom" />
+	<link href="{{ site.baseURL }}" />
+	<updated>{{ site.buildTime|escape }}</updated>
+	<author>
+		<name>{{ site.author }}</name>
+	</author>
+	<id>{{ site.baseURL }}</id>
+{% for post in posts %}
+	<entry>
+		<title>{{ posts[post].title|escape }}</title>
+		<link rel="alternate" href="{{ site.baseURL }}{{ posts[post].basename }}" />
+		<id>{{ site.baseURL }}{{ posts[post].basename }}</id>
+		<updated>{{ posts[post].lastmod|escape }}</updated>
+		<published>{{ posts[post].created|escape }}</published>
+		<summary>{{ posts[post].title|escape }}</summary>
+	</entry>
+{% endfor %}
+</feed>

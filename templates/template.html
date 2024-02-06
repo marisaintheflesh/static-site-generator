@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}" dir="{{ site.textDirection }}">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:description" content="{{ page.title }}">
+<meta property="og:type" content="website">
+{% if page.basename == "index" %}
+<meta property="og:url" content="{{ site.baseURL}}">
+{% else %}
+<meta property="og:url" content="{{ site.baseURL}}{{ page.basename }}">
+{% endif %}
+<meta property="og:image" content="{{ site.baseURL}}og.png">
+<title>{{ page.title }} - {{ site.title }}</title>
+<link rel="stylesheet" href="/css/theme.min.css" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="alternate" href="/feed.atom" type="application/atom+xml" title="Atom Feed - {{ site.title }}">
+<link rel="alternate" href="/feed.rss" type="application/rss+xml" title="RSS Feed - {{ site.title }}">
+{% if page.basename == "index" %}
+<link rel="canonical" href="{{ site.baseURL}}">
+{% else %}
+<link rel="canonical" href="{{ site.baseURL}}{{ page.basename }}">
+{% endif %}
+</head>
+
+<body id="body">
+<div id="top"></div>
+<div id="skip-to-content"><a href="#content">Skip to content...</a></div>
+
+<div id="wrapper">
+<div id="header"><h1>{{ site.title }}</h1></div>
+<hr>
+<div id="content">
+<h1>{{ page.title }}</h1>
+{% include "content.html" %}
+</div>
+<hr>
+<div id="footer">
+<div class="menu">
+{% if page.basename != "index" %}
+<p><a href="/">Home</a></p>
+<hr>
+{% endif %}
+</div>
+<p><a href="/feed.atom">Atom Feed</a> | <a href="/feed.rss">RSS Feed</a></p>
+<p>This site was last built on: {{ site.buildTime }}</p>
+<p><strong>{{ site.year }}, {{ site.author }}</strong></p>
+<p><a href="#top">^ Top</a></p>
+</div>
+</div>
+</body>
+</html>

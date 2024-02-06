@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<!--! Sitemap last generated: {{ site.buildTime|escape }} -->
+{% for page in pages %}
+	<url>
+{% if pages[page].basename == "index" %}
+		<loc>{{ site.baseURL }}</loc>
+{% else %}
+		<loc>{{ site.baseURL }}{{ pages[page].basename }}</loc>
+{% endif %}
+		<lastmod>{{ pages[page].lastmod|escape }}</lastmod>
+	</url>
+{% endfor %}
+{% for post in posts %}
+	<url>
+		<loc>{{ site.baseURL }}{{ posts[post].basename }}</loc>
+		<lastmod>{{ posts[post].lastmod|escape }}</lastmod>
+	</url>
+{% endfor %}
+</urlset>
