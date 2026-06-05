@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATE AND TIME</title>
+<style type="text/css">
+    strong
+    {
+        font-style:bold;
+    }
+    em
+    {
+        text-decoration:italic;
+    }
+    *
+    {
+        box-sizing:border-box;
+    }
+    body
+    {
+        background:#4B0150;
+        color:#d75b8c;
+        margin:0 0 0 0;
+        font-family:monospace;
+        font-size:36pt;
+        line-height:1.4;
+    }
+
+    #date, #time
+    {
+        width:100vw;
+        height:50vh;
+        line-height:50vh;
+        text-align:center;
+    }
+</style>
+<script type="text/javascript">
+    var months = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",  "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+    var tzs = {
+        "300": "EST",
+        "240": "EDT",
+        "0": "GMT"
+    };
+    var days = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.", "Sun."];
+    var dt = null;
+    var tm = null;
+    function getDateTime()
+    {
+        var d = new Date();
+        var yyyy = d.getFullYear().toString();
+        var mm = d.getMonth();
+        var mmm = months[mm];
+        var dd = d.getDate().toString().padStart(2, "0");
+        var ddd = days[d.getDay()];
+        var hh = d.getHours();
+        var ampm = "am";
+        var mins = d.getMinutes().toString().padStart(2, "0");
+        var ss = d.getSeconds().toString().padStart(2, "0");
+        var tz = d.getTimezoneOffset();
+        var finalDate = "";
+        var finalTime = "";
+        mm = mm + 1;
+        mm = mm.toString().padStart(2, "0");
+        if(hh >= 13)
+        {
+            hh -= 12;
+            ampm = "pm";
+        }
+        if(hh === 0)
+        {
+            hh = 12;
+            ampm = "am";
+        }
+        hh = hh.toString().padStart(2, "0");
+
+        tz = tzs[tz.toString()];
+        finalDate = ddd + ", " + mmm + " " + dd + ", " + yyyy + " [" + yyyy + "-" + mm + "-" + dd + "]";
+        finalTime = hh + ":" + mins + ":" + ss + " " + ampm + " (" + tz + ")";
+        dt.innerHTML = finalDate;
+        tm.innerHTML = finalTime;
+    }
+    function DOMContentLoaded()
+    {
+        dt = document.getElementById("date");
+        tm = document.getElementById("time");
+        getDateTime();
+        setInterval(function() { getDateTime(); }, 1000);
+
+    }
+    function load()
+    {
+
+    }
+    document.addEventListener("load", function() { load(); });
+    document.addEventListener("DOMContentLoaded", function() { DOMContentLoaded(); });
+</script>
+</head>
+<body>
+<div id="date">
+</div>
+<div id="time">
+</div>
+</body>
+</html>

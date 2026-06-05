@@ -1,0 +1,148 @@
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    background: #010101;
+    overflow-x: hidden;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0 0 0 0;
+    color: #eee;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+a,
+a:link,
+a:visited
+{
+    color: #b00b69;
+}
+
+a:hover,
+a:focus
+{
+    color: #8800ff;
+}
+
+#wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+
+#canvas-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    width: 320px;
+    height: 180px;
+    min-height: 180px;
+    max-width: 320px;
+    background: #121212;
+}
+
+#canvas,
+#static-logo
+{
+    display: block;
+    background: #121212;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    width: 100%;
+    max-width: 320px;
+    width: 320px;
+    height: 180px;
+}
+
+#search-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px 4px 0px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+#search
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#q
+{
+    margin: 4px 0px 4px 0px;
+    padding: 4px 4px 4px 4px;
+    width: 100%;
+    max-width: 320px;
+    min-height: 32px;
+    font-family: monospace;
+    background: #232323;
+    color: #ffffff;
+    outline: 1px inset #b00b69;
+    border: 0 none;
+}
+
+#submit
+{
+    margin: 8px auto 8px auto;
+    padding: 4px 4px 4px 4px;
+    background: #232323;
+    color: #ffffff;
+    outline: 1px inset #b00b69;
+    border: 0 none;
+}
+
+#submit:hover
+{
+    cursor: pointer;
+}
+
+#submit:active
+{
+    background: #121212;
+    outline: 1px outset #b00b69;
+    border: 0 none;
+}
+
+#footer-wrapper
+{
+    text-align: center;
+}
+
+#me
+{
+    display: block;
+    width: 256px;
+    height: 256px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    border: 2px solid #eee;
+    border-radius: 50%;
+}

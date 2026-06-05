@@ -1,0 +1,244 @@
+/* "Pretty Little Princess" webpage theme by Marisa Marion Mackenzie (website: 1r1s.gg) */
+*
+{
+    box-sizing: border-box;
+}
+
+strong,
+.b
+{
+    font-weight: bold;
+}
+
+em,
+.i
+{
+    font-style: italic;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.u
+{
+    text-decoration: underline;
+}
+
+.s
+{
+    text-decoration: line-through;
+}
+
+body
+{
+    max-width: 100vw;
+    margin: 0 4px 0 4px;
+    padding: 0 0 0 0;
+    font-size: 1.2em;
+    background: #750042;
+}
+
+body,
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    color: #eee;
+    font-family: monospace;
+    line-height: 1.6;
+}
+
+p
+{
+    text-indent: 4em;
+}
+
+a,
+a:link
+{
+    color: #32768a;
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color: #9932af;
+}
+
+a:hover
+{
+    color: #af3277;
+}
+
+a:focus
+{
+    color: #af3232;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+h1
+{
+    font-size: 1.6em;
+}
+
+h2
+{
+    font-size: 1.5em;
+}
+
+h3
+{
+    font-size: 1.4em;
+}
+
+h4
+{
+    font-size: 1.3em;
+}
+
+h5
+{
+    font-size: 1.2em;
+}
+
+h6
+{
+    font-size: 1.1em;
+}
+
+#page-wrapper
+{
+    width: 100%;
+    max-width: 1280px;
+    margin: 32px auto 32px auto;
+    outline: 2px solid #eee;
+    background: #121212;
+    opacity: 0.90;
+}
+
+.page-segment
+{
+    margin: 0 0 0 0;
+    padding: 4px 4px 4px 4px;
+}
+
+hr
+{
+    display: block;
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    height: 2px;
+    background: #eee;
+    border: 0 none;
+    outline: 0 none;
+}
+
+#top
+{
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    top: 0px;
+}
+
+#header-image
+{
+    text-align: center;
+}
+
+#header-image img
+{
+    display: block;
+    width: 256px;
+    height: 256px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    border: 2px solid #eee;
+    border-radius: 50%;
+}
+
+#header-title
+{
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#mini-bio
+{
+    text-align: center;
+}
+
+#menu
+{
+    text-align: center;
+}
+
+ul,
+ul>li
+{
+    list-style: square inside;
+}
+
+#menu ul,
+#menu ul>li
+{
+    list-style: none;
+}
+
+#canvas-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    width: 320px;
+    height: 180px;
+    min-height: 180px;
+    max-width: 320px;
+    background: #121212;
+}
+
+#canvas,
+#static-logo
+{
+    display: block;
+    background: #121212;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    max-width: 320px;
+    width: 320px;
+    height: 180px;
+}
