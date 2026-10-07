@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ site.language }}" dir="{{ site.textDirection }}">
 	<head>
 		<meta charset="{{ site.encoding }}">
