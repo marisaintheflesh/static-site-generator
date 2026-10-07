@@ -67,6 +67,10 @@
 							<a href="/">{{ pg.title }}</a>
 							{% elif pg.base == "pages" %}
 							<a href="/pages/">{{ pg.title }}</a>
+							{% elif pg.base == "posts" %}
+							<a href="/posts/">{{ pg.title }}</a>
+							{% elif pg.base == "podcasts" %}
+							<a href="/podcasts/">{{ pg.title }}</a>
 							{% else %}
 							<a href="/pages/{{ pg.base }}/">{{ pg.title }}</a>
 							{% endif %}
