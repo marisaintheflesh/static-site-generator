@@ -114,7 +114,7 @@ def mksite():
 
     for post in posts:
         os.mkdir(dirs["root"] / dirs["output"] / dirs["posts"] / post["base"])
-        c = ts["html"].render(site=config, podcastconfig=podcastconfig, pages=pages, posts=posts, podcasts=podcasts, title=post["title"], content=post["content"], lastmod=post["lastmod"], created=post["created"], base=post["base"], datasrc=post, fmt=dtfmt["html"], now=now, type="post")
+        c = ts["html"].render(site=config, podcastconfig=podcastconfig, pages=pages, posts=posts, podcasts=podcasts, title=post["title"], content=post["content"], description=post["description"], lastmod=post["lastmod"], created=post["created"], base=post["base"], datasrc=post, fmt=dtfmt["html"], now=now, type="post")
         write_file_contents(dirs["root"] / dirs["output"] / dirs["posts"] / post["base"] / "index.html", c)
 
     for podcast in podcasts:

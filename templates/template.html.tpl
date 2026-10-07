@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+x<!DOCTYPE html>
 <html lang="{{ site.language }}" dir="{{ site.textDirection }}">
 	<head>
 		<meta charset="{{ site.encoding }}">
@@ -75,7 +75,7 @@
 							{% if pts.base == "posts" %}
 							<a href="/posts/">{{ pts.title }}</a>
 							{% else %}
-							<a href="/posts/{{ pts.base }}/">{{ pts.title }}</a>
+							<a href="/posts/{{ pts.base }}/">{{ pts.title }}: {{ pts.description }}</a>
 							{% endif %}
 						</li>
 						{% endfor %}
@@ -110,6 +110,7 @@
 						</li>
 						{% else %}
 						<h1>{{ title }}</h1>
+						<h2>{{ description }}
 						{{ content }}
 	                                        <br>---<br>
 			                        Created: {{ created|datetimeformat(fmt) }}<br>
