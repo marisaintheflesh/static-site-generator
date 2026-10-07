@@ -20,6 +20,26 @@ def clear_directory(dir_path):
             shutil.rmtree(item)
 
 
+
+def copy_directory_tree(src_dir, tar_dir):
+    """
+    Manually copies all files and folders recursively from source to target.
+    Recreates directories and preserves file metadata using shutil.copy2.
+    """
+    src = Path(src_dir)
+    dst = Path(tar_dir)
+
+    for item in src.rglob("*"):
+        relative_path = item.relative_to(src)
+        target_item = dst / relative_path
+
+        if item.is_dir():
+            target_item.mkdir(parents=True, exist_ok=True)
+        elif item.is_file():
+            target_item.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(item, target_item)
+
+
 def main():
     if not Path(root).exists():
         print(f"Script Parent Directory: {root} directory doesn't exist.")
@@ -33,8 +53,7 @@ def main():
         return
 
     clear_directory(target)
-
-    shutil.copytree(output, target, dirs_exist_ok=True)
+    copy_directory_tree(output, target)
 
 
 if __name__ == "__main__":
