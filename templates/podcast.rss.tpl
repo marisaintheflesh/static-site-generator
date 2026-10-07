@@ -11,7 +11,7 @@
 		<itunes:author>{{ site.author }}</itunes:author>
 		<itunes:subtitle>{{ podcast.description }}</itunes:subtitle>
 		<itunes:summary>{{ podcast.description }}</itunes:summary>
-		<itunes:explicit>{{ podcast.explicit | default('no') }}</itunes:explicit>
+		<itunes:explicit>{{ podcast.explicit | default('false') }}</itunes:explicit>
 		<itunes:image href="{{ site.baseURL }}/icon.png" />
 		<itunes:category text="{{ podcast.category }}" />
 		
@@ -35,7 +35,7 @@
 			<itunes:summary>{{ p.description }}</itunes:summary>
 			<itunes:image href="{{ site.baseURL }}/icon.png" />
 			<itunes:duration>{{ p.duration }}</itunes:duration>
-			<itunes:explicit>{{ p.explicit | default('no') }}</itunes:explicit>
+			<itunes:explicit>{{ p.explicit | default('false') }}</itunes:explicit>
 			<itunes:episode>{{ p.episode }}</itunes:episode>
 		</item>
 {% endfor %}
