@@ -13,6 +13,6 @@ I currently just have a sample speech file as a podcast, but I'm going to record
 
 If you're interested in the code and how I set up automatically generating the static site and where I'm storing files away, go to my GitHub at <a href="https://github.com/marisaintheflesh">https://github.com/marisaintheflesh</a>.
 
-NOTE: The code of this website is spread out over a few repositories on GitHub.
+NOTE: The code+assets that combine to this website are spread out over a few repositories on my GitHub.
 
-
+Enjoy your stay!!
