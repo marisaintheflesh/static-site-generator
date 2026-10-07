@@ -12,7 +12,7 @@
 		<itunes:subtitle>{{ podcast.description }}</itunes:subtitle>
 		<itunes:summary>{{ podcast.description }}</itunes:summary>
 		<itunes:explicit>{{ podcast.explicit | default('no') }}</itunes:explicit>
-		<itunes:image href="{{ site.bashURL }}/icon.png" />
+		<itunes:image href="{{ site.baseURL }}/icon.png" />
 		<itunes:category text="{{ podcast.category }}" />
 		
 		<itunes:owner>
