@@ -111,7 +111,9 @@
 						</li>
 						{% else %}
 						<h1>{{ title }}</h1>
-						<h2>{{ description }}
+						{% if description %}
+						<h2>{{ description }}</h2>
+						{% endif %}
 						{{ content }}
 	                                        <br>---<br>
 			                        Created: {{ created|datetimeformat(fmt) }}<br>
