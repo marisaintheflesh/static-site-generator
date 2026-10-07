@@ -119,7 +119,7 @@ def mksite():
 
     for podcast in podcasts:
         os.mkdir(dirs["root"] / dirs["output"] / dirs["podcasts"] / podcast["base"])
-        c = ts["html"].render(site=config, podcastconfig=podcastconfig, pages=pages, posts=posts, podcasts=podcasts, title=podcast["title"], content=podcast["description"], created=podcast["created"], lastmod=podcast["lastmod"], base=podcast["base"], explicit=podcast["explicit"], episode=podcast["episode"], size=podcast["size"], duration=podcast["duration"], datasrc=podcast, fmt=dtfmt["html"], fmtrss=dtfmt["rss"], now=now, type="podcast")
+        c = ts["html"].render(site=config, podcastconfig=podcastconfig, pages=pages, posts=posts, podcasts=podcasts, title=podcast["title"], description=podcast["description"], created=podcast["created"], lastmod=podcast["lastmod"], base=podcast["base"], explicit=podcast["explicit"], episode=podcast["episode"], size=podcast["size"], duration=podcast["duration"], datasrc=podcast, fmt=dtfmt["html"], fmtrss=dtfmt["rss"], now=now, type="podcast")
         write_file_contents(dirs["root"] / dirs["output"] / dirs["podcasts"] / podcast["base"] / "index.html", c)
         if os.path.exists(str(dirs["root"] / dirs["static_podcasts"] / podcast["base"]) + ".mp3"):
             shutil.copy(str(dirs["root"] / dirs["static_podcasts"] / podcast["base"]) + ".mp3", str(dirs["root"] / dirs["output"] / dirs["podcasts"] / podcast["base"] / podcast["base"]) + ".mp3")
