@@ -3,6 +3,7 @@ x<!DOCTYPE html>
 	<head>
 		<meta charset="{{ site.encoding }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 		<title>{{ site.title }}: {{ site.description }}</title>
 		<link rel="stylesheet" type="text/css" href="/PrettyLittlePrincess.css">
 		<link rel="shortcut icon" href="/favicon.ico">
