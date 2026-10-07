@@ -34,7 +34,7 @@ def main():
 
     clear_directory(target)
 
-    shutil.copytree(output, target)
+    shutil.copytree(output, target, dirs_exist_ok=True)
 
 
 if __name__ == "__main__":
