@@ -2,7 +2,7 @@ created = 1780628092
 lastmod = 1780628093
 title = "Home"
 ---
-## Introduction
+### Introduction
 
 Hi! Welcome to my personal website! I'm Marisa. I'm a queer and trans woman, my pronouns are she, her and hers, and my title is Miss (as in, Miss Marisa Marion Mackenzie).
 
@@ -14,7 +14,7 @@ My favorite colors are: pink, purple, yellow, and teal.
 
 My favorite place in the whole wide world is a park and beach located in Peterborough, Ontario, Canada called "Rogers Cove".
 
-## Inactive Project Ideas
+### Inactive Project Ideas
 
 I have had plenty of project ideas over the years that have largely stayed just that: ideas. I often jokingly refer to them as vaporware, because they'll probably never be done.
 
@@ -26,9 +26,10 @@ But still, these ideas are important to me and deeply interest me, and I'd like 
 * A computer and technology restoration and refurbishing project to provide free computers and technology to those otherwise unable to access it and to help divert electronics that are salvageable away from going to waste.
 * "Marisa's Fine Artist": a business where I sell my art, including custom pin buttons.
 
-## Active Projects
+### Active Projects
 
 While I have lots of inactive "vaporware" projects, there are a numbers of things I do actively work on, and I'd like to share them here as well! These projects are important to me, too.
 
 * Queer-Faciliated Poetry Group: I volunteer to co-faciliate a drop-in poetry group for community members, especially those who are marginalized, to create and share poetry together.
 * I volunteer to co-faciliate a penpal project to write and receive letters back-and-forth between people who are incarcerated and people who are not.
+* "Marisa, In The Flesh" Podcast: hopefully doesn't fade away, but so far I'm keen on doing it!
