@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:podcast="https://podcastindex.org/namespace/1.0">
 	<channel>
 		<title>{{ podcast.title }}: {{ podcast.subtitle }}</title>
 		<atom:link href="{{ site.baseURL }}/podcasts/podcasts.rss" type="application/rss+xml" rel="self" />
@@ -19,6 +19,8 @@
 			<itunes:name>{{ site.author }}</itunes:name>
 			<itunes:email>{{ podcast.email }}</itunes:email>
     		</itunes:owner>
+		<podcast:guid>e6cbd7e1-7e84-4311-b54b-ec6bca6da8ad</podcast:guid>
+		<podcast:locked owner="noreply@1r1s.gg">yes</podcast:locked>
 
 {% for p in podcasts %}
 		<item>
