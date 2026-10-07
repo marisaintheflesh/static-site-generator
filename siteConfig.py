@@ -15,6 +15,6 @@ podcastconfig = {
     "description": "A personal podcast of love, hope, joy, care, and happiness!",
     "email": "noreply@1r1s.gg",
     "category": "personal",
-    "explicit": "no",
+    "explicit": "false",
     "language": "en-ca",
 }
