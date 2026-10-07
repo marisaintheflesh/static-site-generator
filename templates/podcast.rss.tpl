@@ -2,6 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 	<channel>
 		<title>{{ podcast.title }}: {{ podcast.subtitle }}</title>
+		<atom:link href="{{ site.baseURL }}/podcasts/podcasts.rss" type="application/rss+xml" rel="self" />
 		<link>{{ site.baseURL }}/podcasts/podcasts.rss</link>
 		<language>{{ podcast.language | default('en-ca') }}</language>
 		<copyright>(c) {{ site.author }}</copyright>
