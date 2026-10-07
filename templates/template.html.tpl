@@ -107,7 +107,7 @@
 							<li>Size: {{ (size / 1024 / 1024) | round(2) }} megabytes</li>
 							<li>Duration: {{ duration }}</li>
 							<li>Is it's content explicit?: {{ explicit | default('no') }}</li>
-							<li>Link: <a href="/podcasts/{{ base }}/{{ base }}.mp3</li>
+							<li>Link: <a href="/podcasts/{{ base }}/{{ base }}.mp3</a></li>
 						</li>
 						{% else %}
 						<h1>{{ title }}</h1>
