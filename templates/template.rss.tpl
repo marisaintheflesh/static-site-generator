@@ -13,7 +13,7 @@
 	<item>
 		<title>{{ post.title }}</title>
 		<link>{{ site.baseURL}}/posts/{{ post.base }}/</link>
-		<pubDate>{{ post.created }}</pubDate>
+		<pubDate>{{ post.created|datetimeformat(fmt) }}</pubDate>
 		<guid>{{ post.base }}</guid>
 		<description>{{ post.description }}</description>
 		<author>{{ site.author }}</author>
