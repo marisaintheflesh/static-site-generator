@@ -28,7 +28,7 @@
 			<description>{{ p.description }}</description>
 			<pubDate>{{ p.created|datetimeformat(fmt) }}</pubDate>
 			<link>{{ site.baseURL }}/podcasts/{{ p.base }}/</link>
-			<guid isPermaLink="false">{{ p.base }}/</guid>
+			<guid isPermaLink="false">{{ p.base }}</guid>
 				
 			<enclosure url="{{ site.baseURL }}/podcasts/{{ p.base }}/{{ p.base }}.mp3" length="{{ p.length }}" type="audio/mpeg" />
 			<itunes:author>{{ site.author }}</itunes:author>
