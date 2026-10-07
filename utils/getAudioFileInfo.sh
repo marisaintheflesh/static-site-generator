@@ -6,8 +6,6 @@ source __venv/bin/activate
 
 pip3 install --upgrade -r requirements.txt
 
-env bash "utils/getPodcasts.sh"
-
-python3 mksite.py
+python3 utils/getAudioFileInfo.py $1
 
 deactivate

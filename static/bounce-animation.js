@@ -1,15 +1,19 @@
 var canvas = null;
 var ctx = null;
+var fps = 60;
+var interval = 1000 / fps;
 var cw = 320;
 var ch = 180;
 var w = 120;
 var h = 27;
 var x = getRandom(1, cw - w - 1);
 var y = getRandom(1, ch - h - 1);
-var xDelta = 1;
-var yDelta = 1;
+var speed = 1;
+var xDelta = (Math.random() < 0.5 ? 1 : -1) * speed;
+var yDelta = (Math.random() < 0.5 ? 1 : -1) * speed;
 var m = new Image(w, h);
-m.src = "/m.png";
+var lastTime = performance.now();
+m.src = "m.png";
 
 function getRandom(min, max)
 {
@@ -61,6 +65,15 @@ function clear()
 
 function draw()
 {
+    requestAnimationFrame(draw);
+    var currentTime = performance.now();
+    var deltaTime = currentTime - lastTime;
+    if(deltaTime < interval)
+    {
+        return;
+    }
+    lastTime = currentTime - (deltaTime % interval);
+    
     clear();
     x += xDelta;
     y += yDelta;
@@ -74,7 +87,7 @@ function draw()
         yDelta *= -1;
     }
     ctx.drawImage(m, x, y);
-    requestAnimationFrame(draw);
+    
 }
 
 addEventListener("load", function()
